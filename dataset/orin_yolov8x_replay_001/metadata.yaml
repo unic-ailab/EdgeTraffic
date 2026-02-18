@@ -1,0 +1,28 @@
+trial_id: "orin_yolov8x_replay_001"  
+video_type: "live" 
+duration: 60
+date: "2024-11-26T12:23:28.000Z"
+device:
+  name: "orin"
+  gpu_model: "NVIDIA ORIN"
+model:
+  family: "YOLOv8"
+  variant: "X"
+  input_size: [640, 640]
+pipeline:
+  framework: "Savant"
+  sdk: "NVIDIA DeepStream"
+  fps: 25
+time:
+  start: "1737011979"
+  end: "1737015579"
+output:
+  csv_file: "data.csv"
+  fields:
+    - "fseqno"
+    - "timestamp"
+    - "car_count"
+    - "model"
+    - "inf_latency"
+    - "gpu_util"
+    - "gpu_power"

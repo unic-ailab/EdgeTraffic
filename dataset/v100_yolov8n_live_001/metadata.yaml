@@ -1,0 +1,33 @@
+trial_id: "v100_yolov8n_live_001"  
+video_type: "live" 
+duration: 15
+date: "2025-01-25T14:30:31.000Z"
+device:
+  name: "server"
+  gpu_model: "NVIDIA V100"
+model:
+  family: "YOLOv8"
+  variant: "N"
+  input_size: [640, 640]
+pipeline:
+  framework: "Savant"
+  sdk: "NVIDIA DeepStream"
+  fps: 25
+time:
+  start: "1738074631"
+  end: "1738075531"
+output:
+  csv_file: "data.csv"
+  fields:
+    - "fseqno"
+    - "timestamp"
+    - "car_count" 
+    - "inf_latency"
+    - "model"
+    - "gpu_util"
+    - "gpu_power"
+    - "network"
+    - "gpu_mem"
+    - "cpu_power"
+    - "cpu_util"
+    - "cpu_mem"
